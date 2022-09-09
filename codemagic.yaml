@@ -2,6 +2,7 @@ workflows:
   ios-workflow:
     name: iOS workflow
     instance_type: mac_pro
+    working_directory: quasar-project
     environment:
       groups:
           - app_store_credentials
