@@ -5,7 +5,7 @@ workflows:
       groups:
           - app_store_credentials
       vars:      
-        BUNDLE_ID: "io.codemagic.ioniccordova" # <-- Put your Bundle Id here 
+        BUNDLE_ID: "io.ionic.starter" # <-- Put your Bundle Id here 
       xcode: latest
       node: v16.11.1
       npm: 6
