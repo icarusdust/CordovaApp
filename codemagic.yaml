@@ -58,7 +58,10 @@ workflows:
                 }
               }
           EOF
-          ionic cordova build ios --release --device --buildConfig='build.json' 
+          yarn install
+          yarn global add @quasar/cli
+          quasar build -m cordova -T ios -- --release --device --buildConfig='build.json' 
+          # ionic cordova build ios --release --device --buildConfig='build.json' 
     artifacts:
       - /Users/builder/clone/platforms/ios/build/device/*.ipa
       - /tmp/xcodebuild_logs/*.log          
