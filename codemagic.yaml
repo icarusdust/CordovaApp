@@ -2,7 +2,6 @@ workflows:
   ios-workflow:
     name: iOS workflow
     instance_type: mac_pro
-    working_directory: quasar-project
     environment:
       groups:
           - app_store_credentials
@@ -61,7 +60,7 @@ workflows:
           EOF
           yarn install
           yarn global add @quasar/cli
-          quasar build -m cordova -T ios -- --release --device --buildConfig='build.json' 
+          cd quasar-project && yarn install quasar build -m cordova -T ios -- --release --device --buildConfig='build.json' 
           # ionic cordova build ios --release --device --buildConfig='build.json' 
     artifacts:
       - /Users/builder/clone/platforms/ios/build/device/*.ipa
